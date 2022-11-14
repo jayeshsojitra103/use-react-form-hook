@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/use-react-form-hook/static/css/main.c0be3dfb.chunk.css",
+    "main.js": "/use-react-form-hook/static/js/main.180ea188.chunk.js",
+    "main.js.map": "/use-react-form-hook/static/js/main.180ea188.chunk.js.map",
+    "runtime-main.js": "/use-react-form-hook/static/js/runtime-main.7c44174b.js",
+    "runtime-main.js.map": "/use-react-form-hook/static/js/runtime-main.7c44174b.js.map",
+    "static/js/2.1d65bfcb.chunk.js": "/use-react-form-hook/static/js/2.1d65bfcb.chunk.js",
+    "static/js/2.1d65bfcb.chunk.js.map": "/use-react-form-hook/static/js/2.1d65bfcb.chunk.js.map",
+    "index.html": "/use-react-form-hook/index.html",
+    "precache-manifest.ad046976470ea88876005050b374862c.js": "/use-react-form-hook/precache-manifest.ad046976470ea88876005050b374862c.js",
+    "service-worker.js": "/use-react-form-hook/service-worker.js",
+    "static/css/main.c0be3dfb.chunk.css.map": "/use-react-form-hook/static/css/main.c0be3dfb.chunk.css.map",
+    "static/js/2.1d65bfcb.chunk.js.LICENSE.txt": "/use-react-form-hook/static/js/2.1d65bfcb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c44174b.js",
+    "static/js/2.1d65bfcb.chunk.js",
+    "static/css/main.c0be3dfb.chunk.css",
+    "static/js/main.180ea188.chunk.js"
+  ]
+}
