@@ -12,6 +12,8 @@ npm install --save use-react-form-hook
 
 ## Usage
 
+
+## Add Page
 ```jsx
 import React from 'react'
 import { useForm } from 'use-react-form-hook';
@@ -118,6 +120,102 @@ const App = () => {
 export default App
 ```
 
+### Edit Page
+
+```jsx
+
+import React, { useEffect, useState } from 'react'
+import { useForm } from 'use-react-form-hook';
+import { VALIDATOR_REQUIRE, VALIDATOR_MINLENGTH, VALIDATOR_EMAIL, validate } from './utils/validators';
+
+
+const EditPage = () => {
+    const [formState, inputHandler, setFormData] = useForm(
+        {
+            title: {
+                value: '',
+                isValid: false
+            },
+            address: {
+                value: '',
+                isValid: false
+            }
+        },
+        false
+    );
+
+    useEffect(() => {
+        setFormData(
+            {
+                name: {
+                    value: 'Jayesh Sojitra',
+                    isValid: true
+                },
+                address: {
+                    value: 'Ahmedabad, India',
+                    isValid: true
+                }
+            },
+            true
+        );
+
+    }, [])
+
+    return (
+        <div className='container'>
+            <div className='main'>
+                <div className='row'>
+                    <div className='col-lg-8 mb-20'>
+                        <div className='card pitch'>
+                            <header className='auth-content'>
+                                <h1>Edit Page</h1>
+                            </header>
+                            <form>
+
+                                <Input
+                                    id="name"
+                                    type="text"
+                                    label="Name"
+                                    errorText="Please enter a name"
+                                    validators={[VALIDATOR_REQUIRE()]}
+                                    onInput={inputHandler}
+                                    initialValue={formState.inputs.name.value}
+                                    initialValid={true}
+                                />
+                                <Input
+                                    id="address"
+                                    type="textarea"
+                                    label="Address"
+                                    rows="5"
+                                    errorText="Please enter a address, at least 10 characters"
+                                    validators={[VALIDATOR_MINLENGTH(10)]}
+                                    onInput={inputHandler}
+                                    initialValue={formState?.inputs?.address?.value}
+                                    initialValid={true}
+                                />
+
+                                <div className="input-container center">
+                                    <Button
+
+                                        type="button"
+                                        disabled={!formState.isValid}>
+                                        Submit
+                                    </Button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div className='col-lg-4 '>
+                        <UserWidget user={auth?.user} tags={tags} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default EditPage;
+```
 ## License
 
 MIT © [jayeshsojitra103](https://github.com/jayeshsojitra103)
