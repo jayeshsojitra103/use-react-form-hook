@@ -126,7 +126,7 @@ export default App
 
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'use-react-form-hook';
-import { VALIDATOR_REQUIRE, VALIDATOR_MINLENGTH, VALIDATOR_EMAIL, validate } from './utils/validators';
+import { VALIDATOR_REQUIRE, VALIDATOR_MINLENGTH } from './utils/validators';
 
 
 const EditPage = () => {
