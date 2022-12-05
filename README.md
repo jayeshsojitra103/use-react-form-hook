@@ -132,7 +132,7 @@ import { VALIDATOR_REQUIRE, VALIDATOR_MINLENGTH, VALIDATOR_EMAIL, validate } fro
 const EditPage = () => {
     const [formState, inputHandler, setFormData] = useForm(
         {
-            title: {
+            name: {
                 value: '',
                 isValid: false
             },
